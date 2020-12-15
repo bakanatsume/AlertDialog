@@ -19,13 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         btnadd.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-
             builder.setTitle("My Alert")
             builder.setMessage("Are you sure?")
             builder.setIcon(android.R.drawable.ic_dialog_alert)
 
             builder.setPositiveButton("Yes") { dialogInterface, which ->
-                Toast.makeText(applicationContext, "clicked yes", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Sum is ${txtFirst.text.toString().toInt() + txtSecond.text.toString().toInt()}", Toast.LENGTH_SHORT).show()
             }
 
             btnalert.setOnClickListener {
